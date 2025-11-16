@@ -1,0 +1,28 @@
+{
+  "functions": {
+    "api/data.ts": {
+      "runtime": "@vercel/node"
+    },
+    "api/pix/create.ts": {
+      "runtime": "@vercel/node"
+    },
+    "api/pix/check-by-pixid/[id].ts": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/data",
+      "destination": "/api/data.ts"
+    },
+    {
+      "source": "/api/pix/create",
+      "destination": "/api/pix/create.ts"
+    },
+    {
+      "source": "/api/pix/check-by-pixid/:id",
+      "destination": "/api/pix/check-by-pixid/[id].ts"
+    }
+  ]
+}
+
